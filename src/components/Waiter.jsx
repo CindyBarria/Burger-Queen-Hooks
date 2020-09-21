@@ -10,7 +10,7 @@ const Waiter = () => {
   let desayunos = data.breakfast;
   let almuerzos = data.lunch;
   let bebidas = data.drinks;
-  const usersData = [
+  /*   const usersData = [
     { id: 1, name: "Tania", username: "floppydiskette" },
     { id: 2, name: "Craig", username: "siliconeidolon" },
     { id: 3, name: "Ben", username: "benisphere" },
@@ -19,7 +19,7 @@ const Waiter = () => {
   const addUser = (user) => {
     user.id = users.length + 1;
     setUsers([...users, user]);
-  };
+  }; */
   const [productos, setProductos] = useState(Productdata);
   const addProduct = (product) => {
     product.id = productos.length + 1;
@@ -27,28 +27,6 @@ const Waiter = () => {
     setProductos([...productos, product]);
   };
 
-  const [precioTotal, setPrecioTotal] = useState([]);
-  const [agregar, setAgregar] = useState([]);
-
-  /* const boleta = (e) => {
-    //valor de cada producto
-    const valor = e.target.value;
-    const precioPedido = parseInt(valor);
-
-    //suma de precios
-    precioTotal.push(precioPedido);
-    setPrecioTotal([...precioTotal]);
-
-    //nombre del pedido
-    const nombrePedido = e.target.name;
-
-    //acumulacion de pedido
-    agregar.push({
-      nombrePedido: nombrePedido,
-      precio: precioPedido,
-    });
-    setAgregar([...agregar]);
-  }; */
   return (
     <div className="waiterContainer">
       <header className="header">
@@ -65,7 +43,7 @@ const Waiter = () => {
       </header>
       <div className="newOrderInfo">
         <div className="clientInfo">
-          <ClientInfo addUser={addUser}></ClientInfo>
+          <ClientInfo></ClientInfo>
         </div>
         <h1 className="menuTitle"> Desayunos </h1>{" "}
         <hr className="hr" size="3px" />
