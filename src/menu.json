@@ -1,0 +1,80 @@
+{
+  "breakfast": [
+    {
+      "id": "1",
+      "name": "Café americano",
+      "price": 500,
+      "img": "https://i.ibb.co/fHWzXCS/icon-cafeamericano.png"
+    },
+    {
+      "id": "2",
+      "name": "Cafe con leche",
+      "price": 700,
+      "img": "https://i.ibb.co/HDYmsvD/icon-cafeconleche.png"
+    },
+    {
+      "id": "3",
+      "name": "Sandwich de J y Q",
+      "price": 1000,
+      "img": "https://i.ibb.co/5GFKWX8/icon-sandwich.png"
+    },
+    {
+      "id": "4",
+      "name": "Jugo de frutas",
+      "price": 1300,
+      "img": "https://i.ibb.co/pnLpQDT/icon-jugodefrutas.png"
+    }
+  ],
+  "lunch": [
+    {
+      "id": "5",
+      "name": "Burger simple",
+      "price": 1000,
+      "img": "https://i.ibb.co/bRPjC6N/icon-burguersimple.png"
+    },
+    {
+      "id": "6",
+      "name": "Burger doble",
+      "price": 1500,
+      "img": "https://i.ibb.co/xY4GNvZ/icon-burguerdoble.png"
+    },
+    {
+      "id": "7",
+      "name": "Aros de cebolla",
+      "price": 500,
+      "img": "https://i.ibb.co/2PWFXM7/icon-onionrings.png"
+    },
+    {
+      "id": "8",
+      "name": "Papas fritas",
+      "price": 500,
+      "img": "https://i.ibb.co/gt0XwHz/icon-papasfritas.png"
+    }
+  ],
+  "drinks": [
+    {
+      "id": "9",
+      "name": "Agua 500ml",
+      "price": 500,
+      "img": "https://i.ibb.co/LzxvRxk/icon-water.png"
+    },
+    {
+      "id": "10",
+      "name": "Agua 750ml",
+      "price": 700,
+      "img": "https://i.ibb.co/68CYDVh/icon-water750ml.png"
+    },
+    {
+      "id": "11",
+      "name": "Bebida 500ml",
+      "price": 700,
+      "img": "https://i.ibb.co/L6sbPMt/icon-soda500ml.png"
+    },
+    {
+      "id": "12",
+      "name": "Bebida 750ml",
+      "price": 1000,
+      "img": "https://i.ibb.co/sjmsZgs/icon-soda750ml.png"
+    }
+  ]
+}

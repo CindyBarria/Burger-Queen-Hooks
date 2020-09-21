@@ -1,0 +1,363 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.productContainer {
+  height: 82vh;
+  width: 100%;
+}
+
+.containerCard {
+  height: 18vh;
+  width: 18vh;
+  border: none;
+  border-radius: 12%;
+  cursor: pointer;
+  margin: 0% 1% 0% 3%;
+  background: #ffffff;
+}
+
+.containerCard:focus {
+  outline: none;
+}
+
+@keyframes toggle {
+  from {
+    transform: scale(0.6);
+    background: #bfe6ac;
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.containerCardActive {
+  background: #7ec858;
+  animation: 200ms toggle ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.card-price {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.05em;
+}
+.card-name {
+  font-size: 18px;
+}
+body {
+  background-color: #eeeeee;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #78bb55 0%, #5a5a5a 100%);
+  width: 100%;
+  height: 60px;
+  margin-bottom: 2%;
+}
+
+.goToKitchen {
+  font-family: Livvic;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  color: #eeeeee;
+  /*margin: 0vh 0vh 0vh 110%;*/
+  border: none;
+  padding: 12.5px;
+  background: none;
+  outline: none;
+}
+
+.goToHome {
+  font-family: Livvic;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  color: #eeeeee;
+  margin-left: 1%;
+  border: none;
+  padding: 12.5px;
+  background: none;
+}
+
+.goToKitchenLogo {
+  width: 10%;
+}
+
+.waiterContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newOrderInfo {
+  width: 50%;
+  height: auto;
+  background-color: #eeeeee;
+  margin-right: 22px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding-bottom: 2%;
+  margin-top: 5%;
+}
+
+.menuTitle {
+  width: 360px;
+  margin-left: 26px;
+  font-family: Livvic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.05em;
+  color: #5a5a5a;
+}
+
+.hr {
+  border: 0.5px solid #9292924b;
+  width: 94%;
+  color: #5a5a5a;
+  margin: 0% 0% 3% 2%;
+}
+
+.containerOrder {
+  margin-top: 5%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-delete {
+  margin-left: 40%;
+  width: 15px;
+}
+
+.summary {
+  width: 72%;
+  height: 21vh;
+  margin: 87% 0% 0% 19%;
+}
+
+.buttonEnviar,
+.buttonCancelar {
+  background: #78bb55;
+  height: 61px;
+  width: 90%;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  font-size: 25px;
+  font-family: "Livvic", sans-serif;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+  border: none;
+}
+
+.buttonCancelar {
+  background: #7b7a7a;
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .hr {
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid black;
+  }
+
+  .containerCard {
+    height: 15vh;
+    width: 15vh;
+    margin: 0px 0px 0px 12px;
+  }
+
+  .item-img {
+    max-width: 50px;
+    max-height: 40px;
+  }
+
+  .card-price {
+    font-family: Livvic;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    margin-bottom: 4%;
+  }
+
+  .card-name {
+    font-size: 13px;
+  }
+  .goToKitchenLogo {
+    width: 11%;
+  }
+
+  .header {
+    height: 6vh;
+    margin-bottom: 0.5%;
+  }
+
+  .menuTitle {
+    font-size: 20px;
+  }
+
+  .newOrderInfo {
+    font-size: 25px;
+    margin-left: 3vh;
+    height: 86vh;
+    width: 51%;
+    margin-top: 10vh;
+  }
+  .containerOrder {
+    width: 43%;
+    margin-top: 10vh;
+  }
+
+  .buttonEnviar,
+  .buttonCancelar {
+    height: 51px;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .summary {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 44%;
+    height: 61px;
+    margin: 59% -1%;
+  }
+
+  .order {
+    margin-top: 1vh;
+    border-radius: 16px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .containerCard {
+    height: 14vh;
+    width: 14vh;
+    margin-left: 30px;
+    margin: -3% 1% 0px 4%;
+  }
+
+  .item-img {
+    max-width: 50px;
+    max-height: 40px;
+  }
+
+  .card-price {
+    font-family: Livvic;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    margin-bottom: 4%;
+  }
+
+  .card-name {
+    font-size: 13px;
+  }
+
+  .hr {
+    border: 1px solid #9292924b;
+    width: 94%;
+    margin: 0% 0% 3% 3%;
+  }
+  .header {
+    height: 6vh;
+    margin-bottom: 0.5%;
+    background: linear-gradient(to right, #78bb55 0%, #5a5a5a 100%);
+  }
+  .goToKitchen {
+    margin-top: 0vh;
+    margin-left: 0vh;
+  }
+
+  .goToKitchenLogo {
+    width: 11%;
+  }
+
+  .goToKitchenSpan {
+    font-family: Livvic;
+    letter-spacing: 0.05em;
+    color: #5a5a5a;
+    margin: 2vh 0vh 0vh 36vh;
+  }
+
+  .newOrderInfo {
+    width: 100%;
+    height: 70vh;
+    margin: 7vh 1vh 1vh 1vh;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .menuTitle {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+
+  .hr {
+    margin-top: 0px;
+    margin: 0% 0% 3% 2%;
+  }
+
+  .containerOrder {
+    width: 100%;
+    margin-top: 2vh;
+    flex-direction: space-around;
+    margin-left: 1vh;
+    margin-right: 1vh;
+  }
+
+  .buttonEnviar,
+  .buttonCancelar {
+    height: 60px;
+    width: 100%;
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 61px;
+    position: relative;
+    /* width: 80%; */
+    height: 61px;
+    margin: 2% 5% 5% 5%;
+  }
+
+  .order {
+    margin-top: 1vh;
+    border-radius: 16px;
+  }
+}
