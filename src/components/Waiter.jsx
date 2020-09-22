@@ -1,31 +1,20 @@
-import React, { useState } from "react";
-import data from "../menu.json";
+import React from "react";
 import "../styles/waiter.css";
 import { Link } from "react-router-dom";
 import Order from "./Order";
 import ClientInfo from "./ClientInfo";
-import Product from "./Product";
+import ButtonSend from "./buttonSend";
+import { MenuContext } from "../context/MenuProvider";
+
 const Waiter = () => {
-  const Productdata = data;
-  let desayunos = data.breakfast;
-  let almuerzos = data.lunch;
-  let bebidas = data.drinks;
-  /*   const usersData = [
-    { id: 1, name: "Tania", username: "floppydiskette" },
-    { id: 2, name: "Craig", username: "siliconeidolon" },
-    { id: 3, name: "Ben", username: "benisphere" },
-  ];
-  const [users, setUsers] = useState(usersData);
-  const addUser = (user) => {
-    user.id = users.length + 1;
-    setUsers([...users, user]);
-  }; */
-  const [productos, setProductos] = useState(Productdata);
-  const addProduct = (product) => {
-    product.id = productos.length + 1;
-    console.log(product.id, "productosss");
-    setProductos([...productos, product]);
-  };
+  const {
+    breakfast,
+    lunch,
+    drinks,
+    clickProduct,
+    order,
+    sum,
+  } = React.useContext(MenuContext);
 
   return (
     <div className="waiterContainer">
@@ -47,52 +36,59 @@ const Waiter = () => {
         </div>
         <h1 className="menuTitle"> Desayunos </h1>{" "}
         <hr className="hr" size="3px" />
-        {desayunos.map((product, i) => {
+        {breakfast.map((product) => {
           return (
-            <Product
-              addproduct={addProduct}
-              key={product.id}
-              name={product.name}
-              price={product.price}
-              img={product.img}
-            ></Product>
+            <button
+              className="containerCard"
+              onClick={() => clickProduct(product)}
+            >
+              <div className="productCard" key={product.id}>
+                <p className="card-price">{product.price}</p>
+                <img src={product.img} alt="" className="item-img" />
+                <p className="card-name">{product.name}</p>
+              </div>
+            </button>
           );
         })}
         <h1 className="menuTitle"> Almuerzos </h1>{" "}
         <hr className="hr" size="3px" />
-        {almuerzos.map((product, i) => {
+        {lunch.map((product) => {
           return (
-            <Product
-              addproduct={addProduct}
-              key={product.id}
-              name={product.name}
-              price={product.price}
-              img={product.img}
-            ></Product>
+            <button
+              className="containerCard"
+              onClick={() => clickProduct(product)}
+            >
+              <div className="productCard" key={product.id}>
+                <p className="card-price">{product.price}</p>
+                <img src={product.img} alt="" className="item-img" />
+                <p className="card-name">{product.name}</p>
+              </div>
+            </button>
           );
         })}
         <h1 className="menuTitle"> Para beber </h1>{" "}
         <hr className="hr" size="3px" />
-        {bebidas.map((product, i) => {
+        {drinks.map((product) => {
           return (
-            <Product
-              addproduct={addProduct}
-              key={product.id}
-              name={product.name}
-              price={product.price}
-              img={product.img}
-            ></Product>
+            <button
+              className="containerCard"
+              onClick={() => clickProduct(product)}
+            >
+              <div className="productCard" key={product.id}>
+                <p className="card-price">{product.price}</p>
+                <img src={product.img} alt="" className="item-img" />
+                <p className="card-name">{product.name}</p>
+              </div>
+            </button>
           );
         })}
       </div>
       <div className="containerOrder">
         <div>
-          <Order productos={productos}></Order>
+          {" "}
+          <Order order={order} sum={sum}></Order>{" "}
         </div>
-        <div className="summary">
-          <button className="buttonEnviar">Enviar a cocina</button>
-          <button className="buttonCancelar">Cancelar pedido</button>
-        </div>
+        <ButtonSend />
       </div>
     </div>
   );
